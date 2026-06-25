@@ -1,4 +1,3 @@
-# .github/workflows/pr-review.yml
 name: AI PR Review
 
 on:
@@ -8,6 +7,9 @@ on:
 jobs:
   review:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
 
