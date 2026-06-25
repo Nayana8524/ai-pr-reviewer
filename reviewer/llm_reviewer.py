@@ -3,11 +3,12 @@ import google.generativeai as genai
 import os
 
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-model = genai.GenerativeModel("gemini-2.0-flash")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 REVIEW_PROMPT = """You are a senior software engineer reviewing a pull request.
 
 File: {filename}
+
 
 Static analysis findings:
 {static_findings}
